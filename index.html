@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Life Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Particle Life Simulation</h1>
+        </header>
+        
+        <div class="controls-top">
+            <div class="control-group">
+                <h3>Presets</h3>
+                <div class="button-container">
+                    <button id="preset-balanced">Balanced</button>
+                    <button id="preset-chaos">Chaos</button>
+                    <button id="preset-diversity">Diversity</button>
+                    <button id="preset-frictionless">Frictionless</button>
+                    <button id="preset-gliders">Gliders</button>
+                    <button id="preset-homogeneity">Homogeneity</button>
+                    <button id="preset-large">Large Clusters</button>
+                    <button id="preset-medium">Medium Clusters</button>
+                    <button id="preset-quiescence">Quiescence</button>
+                    <button id="preset-small">Small Clusters</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <h3>Simulation Controls</h3>
+                <div class="button-container">
+                    <button id="toggle-wrap">Toggle Wrap-Around</button>
+                    <button id="reseed">Re-seed Particles</button>
+                    <button id="slow-motion">Slow Motion</button>
+                    <button id="print-params">Print Parameters</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="simulation-container">
+            <canvas id="simulation"></canvas>
+        </div>
+        
+        <div class="particle-interaction">
+            <div class="control-group">
+                <h3>Particle Interaction</h3>
+                <div class="button-container">
+                    <button id="follow-off">Stop Following Particle</button>
+                    <button id="zoom-in">Zoom In</button>
+                    <button id="zoom-out">Zoom Out</button>
+                    <button id="reset-view">Reset View</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h3>Parameter Information</h3>
+            <div id="param-display"></div>
+        </div>
+        
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>This is a particle life simulation where different colored particles interact according to attraction and repulsion rules. Use the buttons above to control the simulation.</p>
+            <ul>
+                <li><strong>Presets:</strong> Choose from different simulation presets with unique behaviors</li>
+                <li><strong>Toggle Wrap-Around:</strong> Make particles wrap around screen edges</li>
+                <li><strong>Re-seed Particles:</strong> Keep rules but randomize particle positions</li>
+                <li><strong>Slow Motion:</strong> Hold to slow down the simulation</li>
+                <li><strong>Print Parameters:</strong> Show the current simulation parameters</li>
+                <li><strong>Mouse:</strong> Click on a particle to follow it, right-click to stop following</li>
+                <li><strong>Zoom:</strong> Use the zoom buttons to zoom in/out</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Web version of Particle Life simulation - Based on the original C++ version</p>
+        </footer>
+    </div>
+
+    <script src="particles.js"></script>
+    <script src="controls.js"></script>
+</body>
+</html>
